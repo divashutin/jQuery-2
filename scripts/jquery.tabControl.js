@@ -2,46 +2,41 @@
     $.fn.tabControl = function(options){
         var $elem = this;
         var settings = $.extend({}, $.fn.tabControl.defaults, options);
-        var tabHeaders;
-        var tabHeadersItems; //= tabHeaders.find('li');
-        var tabContainers; //= $('.tab-content', $elem);
+        var tabMenu;
+        var tabMenuItems;
+        var tabContainers;
+        var selectedTab;
 
-        function setActiveTab(){
-            var selectedTab = settings.selected < tabHeadersItems.length && settings.selected >= 0 ?
+        function setSelectedTab(){
+            selectedTab = settings.selected < tabMenuItems.length && settings.selected >= 0 ?
                               settings.selected : $.fn.tabControl.defaults.selected;
-            changeActiveTab(tabHeaders.children().eq(selectedTab));
+            changeSelectedTab(tabMenuItems.eq(selectedTab));
         }
 
-        function changeActiveTab(newActiveTab){
-            var targetIndex = tabHeaders.children().index(newActiveTab);
+        function changeSelectedTab(newSelectedTab){
+            var newSelectedTabIndex = tabMenuItems.index(newSelectedTab);
 
-            if(targetIndex == -1){
+            if(newSelectedTabIndex == -1){
                 return;
             }
-            tabHeadersItems.removeClass('active');
-            $(newActiveTab).addClass('active');
+            tabMenuItems.eq(selectedTab).removeClass('active-tab-menu');
+            $(newSelectedTab).addClass('active-tab-menu');
 
-            tabContainers.removeClass('active');
-            $(tabContainers[targetIndex]).addClass('active');
-        }
+            tabContainers.eq(selectedTab).removeClass('active-tab');
+            tabContainers.eq(newSelectedTabIndex).addClass('active-tab');
 
-        function generateMarkup(){
-
-
+            selectedTab = newSelectedTabIndex;
         }
 
         return this.each(function(){
-            if(settings.init === true){
-                generateMarkup();
+            tabMenu = $('.tab-menu', $elem);
+            tabMenuItems = tabMenu.children();
+            tabContainers = $('.tab-content', $elem);
 
-                tabHeaders = $('.tab-menu', $elem);
-                tabHeadersItems = tabHeaders.find('li');
-                tabContainers = $('.tab-content', $elem);
-            }
-            setActiveTab();
+            setSelectedTab();
 
-            tabHeaders.click(function(e){
-                changeActiveTab(e.target);
+            tabMenu.click(function(e){
+                changeSelectedTab(e.target);
             });
         });
     };
@@ -49,5 +44,5 @@
     $.fn.tabControl.defaults = {
         selected: 0,
         init: false
-    }
+    };
 })(jQuery);
