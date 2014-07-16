@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/grid.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+    <script src="../lib/jquery-2.1.1.min.js"></script>
+    <script src="scripts/in_view_selector.js"></script>
+    <title>InView Selector Demo</title>
+</head>
+<body>
+    <header class="main-header">Sitename
+        <div class="header fold"></div>
+    </header>
+
+    <div class="main-container span12">
+    <aside class="left-sidebar span2">
+        <section class="user span2">
+            <div class="user-photo-wrapper"></div>
+        </section>
+
+        <section class="social span2">
+            <p class="user-name">John Doe</p>
+            <p class="user-status">sitam oreiontom ipsum</p>
+            <div class="social-logos-wrapper">
+                    <span>
+                        <button type="button" class="facebook-btn"></button>
+                        <button type="button" class="twitter-btn"></button>
+                        <button type="button" class="linkedin-btn"></button>
+                    </span>
+            </div>
+        </section>
+
+        <nav class="main-menu span2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">My services</a></li>
+                <li><a href="#">My work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="content span7">
+
+        <section class="main-article">
+            <header class="main-article-header">
+                <p class="article-h4">Lorem ipsum dolo</p>
+                <p class="article-h1">Praesent dapib<br>cursus fau cibus Nor</p>
+            </header>
+            <div class="banner">
+                <div class="buttons">
+                    <button class="forward-btn">
+                        <img src="images/fullhd/left-arrow.png" alt="">
+                    </button><!--
+                    --><button class="forward-btn">
+                    <img src="images/fullhd/right-arrow.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <article class="m-art">
+                <header class="m-art-header">
+                    <p class="article-h3">Integer vitae libero ac risus egestas place</p>
+                    <p class="article-h4">Morbi interdum mollis sapien</p>
+                </header>
+                <p class="art-content">
+                    Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus
+                    metus libero eu augue. Morbi<br>purus libero, faucibus adipiscing, commodo quis,
+                    gravida id, est. Sed lectus. Praesent elementum hendrerit<br> tortor. Sed semper
+                    lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod
+                    dui, eu<br> pulvinar nunc sapien ornare nisl.
+                </p>
+            </article>
+            <button class="read-more-btn btn">Read more</button>
+        </section>
+
+
+        <section class="gallery span4">
+                <span>
+                    <div class="gallery-image">
+                        <img src="images/fullhd/cont2-top-left-photo.png" alt="">
+                        <input type="text" class="gallery-btn" placeholder="Sed adipiscin"/>
+                    </div>
+                    <div class="gallery-image prefix1">
+                        <img src="images/fullhd/cont2-top-right-photo.png" alt="">
+                        <input type="text" class="gallery-btn" placeholder="Sed adipiscin"/>
+                    </div>
+                    <div class="gallery-image row2">
+                        <img src="images/fullhd/cont2-bottom-left-photo.png" alt="">
+                        <input type="text" class="gallery-btn" placeholder="Sed adipiscin"/>
+                    </div>
+                    <div class="gallery-image prefix1 row2">
+                        <img src="images/fullhd/cont2-bottom-right-photo.png" alt="">
+                        <input type="text" class="gallery-btn" placeholder="Sed adipiscin"/>
+                    </div>
+
+                </span>
+
+        </section>
+        <section class="archives span3">
+            <div class="archive-art">
+                <header class="archive-art-header">
+                    <p class="article-h3">Lorem ipsum dolor</p>
+                    <p class="article-h4">Praesent elementum hendrerit tortor.<br>Sed semper lorem at felis.</p>
+                </header>
+
+                <section class="art-content">
+                    <p>Vestibulum volutpat, lacus a ultrices<br>sagittis, mi neque euismod dui,
+                        eu pulvi-<br>nar nunc sapien ornare nisl.</p><p>Sed adipiscing ornare risus. Morbi
+                    est<br>est, blandit sit amet, sagittis vel, euis-<br>mod vel, velit. Pellentesque
+                    egestas<br>sem. Suspendisse com</p>Modo ullamcorper magna.Morbi inter-<br>dum mollis
+                    sapien. Sed ac risus. Phasel-<br>lus lacinia, magna a ullamcorper laoreet,<br>lectus arcu pulvinar risus
+                </section>
+            </div>
+            <button class="archives-btn btn">Archives</button>
+        </section>
+        <section class="comments">
+            <ul>
+                <li>
+
+                    <!---->
+                    <div class="comment-wrapper" id="amenda">
+                        <div class="img" > </div>
+                        <p class="who">Amenda said...</p>
+                        <p class="text">“ Modo ullamcorper magna.Morbi interdum mollis sapien.
+                            Sed ac risus. Phasellus lacinia,<br>magna a ullamcorper laoreet,
+                            lectus arcu pulvinar risus ”</p>
+                    </div>
+                </li>
+                <li>
+
+                    <!---->
+                    <div class="comment-wrapper" id="peter">
+                        <div class="img" ></div>
+                        <p class="who">Peter said...</p>
+                        <p class="text">“ Modo ullamcorper magna.Morbi interdum mollis sapien.
+                            Sed ac risus. Phasellus lacinia,<br>magna a ullamcorper laoreet,
+                            lectus arcu pulvinar risus ”</p>
+                    </div>
+                </li>
+                <li>
+                    <!---->
+
+                    <div class="comment-wrapper" id="jack">
+                        <div class="img" ></div>
+                        <p class="who">Jack said...</p>
+                        <p class="text">“ Modo ullamcorper magna.Morbi interdum mollis sapien.
+                            Sed ac risus. Phasellus lacinia,<br>magna a ullamcorper laoreet,
+                            lectus arcu pulvinar risus ”</p>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+
+    </div>
+
+    <aside class="right-sidebar span3">
+        <section class="search span3">
+            <form class="search-form" action="#">
+                <span>
+                    <input type="search" class="search-bar" placeholder="search here..."/><!--
+                    --><button type="submit" class="search-button">
+                    <img src="images/fullhd/search-logo-wo-bkgnd.png" alt="">
+                </button>
+                </span>
+            </form>
+        </section>
+        <div class="sidebar fold"></div>
+
+        <section class="contact-info span3">
+            <header class="contact-info-header">Contact me</header>
+            <p class="email">myname@sitename.com</p>
+            <div class="phone">
+                <div class="phone-photo"></div>
+                <!---->
+                <p class="phone-number">call me<br>000-8888-888888</p>
+            </div>
+        </section>
+        <div class="sidebar fold"></div>
+
+        <section class="additional-nav">
+            <header class="content-header">
+                <p class="head1">integer vis ticen</p>
+                <p class="head2">Eusimod vestinulam lacus ultrie</p>
+            </header>
+            <nav class="additional-menu">
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor sit ame</a></li>
+                    <li><a href="#">Aliquam tincidunt mauris</a></li>
+                    <li><a href="#">Vestibulum auctor dapibus nequ</a></li>
+                    <li><a href="#">Nunc dignissim risus id metu</a></li>
+                    <li><a href="#">Vivamus vestibulum nulla nec</a></li>
+                    <li><a href="#">Fusce pellentesque suscipit nibh</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="sidebar fold"></div>
+
+        <section class="message-form">
+            <header class="content-header">
+                <p class="head1">integer vis ticen</p>
+                <p class="head2">Eusimod vestinulam lacus ultrie</p>
+            </header>
+            <form class="message" action="#">
+                <input type="text" class="message-textbox" placeholder="your name ...">
+                <input type="text" class="message-textbox" placeholder="your mail ...">
+                <textarea class="message-textarea" placeholder="your message ..."></textarea>
+                <button type="submit" class="message-submit-btn">Submit</button>
+            </form>
+        </section>
+        <div class="sidebar fold"></div>
+    </aside>
+    <footer class="main-footer">
+        Copyright(c) website name. Designed by: www.alltemplateneeds.com -
+        Images from: www.wallcoo.net / www.photorack.net
+        <div class="footer fold"></div>
+    </footer>
+    </div>
+</body>
+</html>

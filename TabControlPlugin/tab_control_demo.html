@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/tab_control.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/demo.css"/>
+    <script src="../lib/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.tabControl.js" type="text/javascript"></script>
+    <title>Tab Control Demo</title>
+    <script>
+        $(document).ready(function(){
+            $('#tab-control1').tabControl({selected: 1});
+            $('#tab-control2').tabControl({selected: 2});
+        });
+    </script>
+</head>
+<body>
+    <p>TabControl is built using ul</p>
+    <div id="tab-control1" class="tab-control">
+        <ul class="tab-menu">
+            <li class="tab-menu-item">Tab1</li>
+            <li class="tab-menu-item">Tab2</li>
+            <li class="tab-menu-item">Tab3</li>
+        </ul>
+        <div class="tab-content">Tab1 content</div>
+        <div class="tab-content">Tab2 content</div>
+        <div class="tab-content">Tab3 content</div>
+    </div>
+
+    <p>Next one is built using only divs</p>
+    <div id="tab-control2" class="tab-control">
+        <div class="tab-menu">
+            <div class="tab-menu-item">Tab1</div>
+            <div class="tab-menu-item">Tab2</div>
+            <div class="tab-menu-item">Tab3</div>
+        </div>
+        <div class="tab-content">Tab1 content</div>
+        <div class="tab-content">Tab2 content</div>
+        <div class="tab-content">Tab3 content</div>
+    </div>
+</body>
+</html>
